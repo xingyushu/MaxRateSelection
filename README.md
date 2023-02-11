@@ -1,5 +1,5 @@
-﻿# Active Client Selection for Communication-efficient Federated Learning
-Active Client Selection algorithms of Federated Learning implementations by PyTorch in my Thesis.
+﻿#  Client Selection for Communication-efficient Federated Learning
+ Client Selection algorithms of Federated Learning implementations by PyTorch
 
 ## Requirements
 ```shell
@@ -22,6 +22,7 @@ python main.py --method {client selection method you want}
  4. ```Cluster1```: Clustered Sampling 1 [[Yann Fraboni et al., 2021](http://proceedings.mlr.press/v139/fraboni21a/fraboni21a.pdf)]
  5. ```Cluster2```: Clustered Sampling 2 [[Yann Fraboni et al., 2021](http://proceedings.mlr.press/v139/fraboni21a/fraboni21a.pdf)]
  6. ```DivFL```: Diverse Client Selection for FL [[Ravikumar Balakrishnan et al., 2022](https://openreview.net/pdf?id=nwKXyFvaUm)]
+ 7. ```MaxRate```: MaxRate
 
 ## Benchmark Datasets
 
