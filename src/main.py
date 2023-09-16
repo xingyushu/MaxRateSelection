@@ -29,6 +29,8 @@ def load_data(args):
         return RedditDataset(args.data_dir, args)
     elif args.dataset == 'FederatedEMNIST':
         return FederatedEMNISTDataset(args.data_dir, args)
+    elif args.dataset == 'MNISTDataset':
+        return MNISTDataset(args.data_dir, args)
     elif args.dataset == 'FederatedEMNIST_IID':
         return FederatedEMNISTDatasetIID(args.data_dir, args)
     elif args.dataset == 'FederatedEMNIST_nonIID':
@@ -45,6 +47,8 @@ def create_model(args):
     if args.dataset == 'Reddit' and args.model == 'BLSTM':
         model = BLSTM(vocab_size=args.maxlen, num_classes=args.num_classes)
     elif args.dataset == 'FederatedEMNIST_nonIID' and args.model == 'CNN':
+        model = CNN_DropOut(True)
+    elif args.dataset == 'MNISTDataset' and args.model == 'CNN':
         model = CNN_DropOut(True)
     elif args.dataset == 'FederatedEMNIST_nonIID' and args.model == 'CNN':
         model = CNN_DropOut(True)
